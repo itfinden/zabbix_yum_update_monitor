@@ -16,7 +16,7 @@
             name: "yum_update_agent_script.sh Access Remote Cron"
             minute: "0"
             hour: "10"
-            job: "wget -q -O /root/zabbix_conf.yml https://raw.githubusercontent.com/itfinden/CSF_playbook_itfinden/main/zabbix.yml && ansible-playbook /root/zabbix_conf.yml >/dev/null 2>&1"
+            job: "wget -q -O /root/ansible_zabbix_yum_update_agent_script.yml https://raw.githubusercontent.com/itfinden/zabbix_yum_update_monitor/main/ansible_zabbix_yum_update_agent_script.yml && ansible-playbook /root/ansible_zabbix_yum_update_agent_script.yml >/dev/null 2>&1"
       - name: Permitir ejecutar yum_update_agent_script.sh 
         ansible.builtin.cron:
             name: "yum_update_agent_script.sh diariamente"
