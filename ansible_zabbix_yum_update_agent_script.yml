@@ -6,9 +6,9 @@
   tasks:
       - name: Create a directory if it does not exist
         ansible.builtin.file:
-        path: "{{ folderdownload }}"
-        state: directory
-        #mode: '0755'
+            path: "{{ folderdownload }}"
+            state: directory
+            #mode: '0755'
       - name: Download yum_update_agent_script.sh
         ansible.builtin.get_url:
             url: https://raw.githubusercontent.com/itfinden/zabbix_yum_update_monitor/main/yum_update_agent_script.sh
