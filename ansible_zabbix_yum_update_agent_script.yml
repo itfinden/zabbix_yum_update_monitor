@@ -26,6 +26,6 @@
       - name: Permitir ejecutar yum_update_agent_script.sh 
         ansible.builtin.cron:
             name: "yum_update_agent_script.sh diariamente"
-            minute: "0"
-            hour: "12"
+            minute: "30"
+            hour: "*"
             job: "sh /etc/zabbix/scripts/yum_update_agent_script.sh >/dev/null 2>&1"
